@@ -3,12 +3,17 @@ package;
 import milkcocoa.Account;
 import milkcocoa.DataStore;
 
+@:expose
 class Sample{
 	public static function main(){
-		Account.sineUp("nobukazu@bar.com","nobunobu",null,function(e){
-			Account.signIn("nobunobu@bar.com","nobukazu",function(e, account){
+		//Account.signUp("nobukazu@bar.com","nobunobu",{},function(e){
+			//trace("signUp");
+			//trace(e);
+			Account.signIn("nobukazu@bar.com","nobunobu",function(e, account){
+				trace("signIn");
+				trace(e);
 				trace(account);
 				});
-			});
+			//});
 	}
 }
