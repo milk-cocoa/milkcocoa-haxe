@@ -1,7 +1,8 @@
 package milkcocoa;
 
+@:expose
 extern class Query {
-	import milkcocoa.Query;
+
 	/**
 	 * コンストラクタ
 	 * @param	params	？

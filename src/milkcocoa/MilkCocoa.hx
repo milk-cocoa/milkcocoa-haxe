@@ -1,5 +1,6 @@
 package milkcocoa;
 
+@:expose
 extern class MilkCocoa
 {
 	/**
