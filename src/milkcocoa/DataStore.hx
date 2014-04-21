@@ -1,9 +1,7 @@
 package milkcocoa;
 
-@:expose
 extern class DataStore
 {
-	import milkcocoa.DataStore;
 	/**
 	 * コンストラクタ
 	 * @param	path	パス文字列
@@ -27,27 +25,27 @@ extern class DataStore
 	 * @param	event	イベント名
 	 * @param	cb		コールバック関数
 	 */
-	public function on( event:String, cb:Dynamic->Void ):Void;
+	public function on( event:String, ?cb:Dynamic->Void ):Void;
 
 	/**
 	 * プッシュ
 	 * @param	value		値
 	 * @param	onComplete	完了時のコールバック関数
 	 */
-	public function push( value:Dynamic, onComplete:Dynamic->Void ):Void;
+	public function push( value:Dynamic, ?onComplete:Dynamic->Void ):Void;
 
 	/**
 	 * 削除
 	 * @param	onComplete	完了時のコールバック関数
 	 */
-	public function remove( onComplete:Dynamic->Void ):Void;
+	public function remove( ?onComplete:Dynamic->Void ):Void;
 
 	/**
 	 * 
 	 * @param	value		値
 	 * @param	onComplete	完了時のコールバック関数
 	 */
-	public function set( value:Dynamic, onComplete:Dynamic->Void ):Void;
+	public function set( value:Dynamic, ?onComplete:Dynamic->Void ):Void;
 
 	/**
 	 * クエリ
@@ -60,7 +58,7 @@ extern class DataStore
 	 * 取得
 	 * @param	cb	コールバック関数
 	 */
-	public function get( cb:Dynamic->Void ):Void;
+	public function get( ?cb:Dynamic->Void ):Void;
 
 	/**
 	 * パス取得

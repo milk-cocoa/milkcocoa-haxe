@@ -1,19 +1,13 @@
-package;
+package ;
 
-import milkcocoa.Account;
+import milkcocoa.MilkCocoa;
 import milkcocoa.DataStore;
-import MilkHelper;
+import milkcocoa.Query;
 
 class Sample{
 	public static function main(){
-		MilkHelper.pour_the_milk("localhost:3000","nobkz",init);
-	}
+		var milkcocoa = new MilkCocoa("https://io-sample.mlkcca.com/");
+		var dataStore : DataStore = milkcocoa.dataStore("root");
 
-	public static function init(){
-		Account.signIn("nobukazu@bar.com","nobunobu",function(e, account){
-				trace("signIn");
-				trace(e);
-				trace(account);
-		});
 	}
 }

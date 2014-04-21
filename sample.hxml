@@ -1,4 +1,4 @@
 -main Sample
--cp src 
+-cp src
 -cp sample 
 -js exports/sample.js

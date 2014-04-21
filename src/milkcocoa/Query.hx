@@ -1,6 +1,5 @@
 package milkcocoa;
 
-@:expose
 extern class Query {
 
 	/**
@@ -13,7 +12,7 @@ extern class Query {
 	 * 終了
 	 * @param	cb	コールバック関数
 	 */
-	public function done( cb:Dynamic->Void ):Void;
+	public function done( ?cb:Dynamic->Void ):Void;
 
 	/**
 	 * 
