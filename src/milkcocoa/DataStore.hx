@@ -15,13 +15,13 @@ extern class DataStore
 	public function send( value:Dynamic ):Void;
 
 	/**
-	 * 
+	 *
 	 * @param	event	イベント名
 	 */
 	public function off( event:String ):Void;
 
 	/**
-	 * 
+	 *
 	 * @param	event	イベント名
 	 * @param	cb		コールバック関数
 	 */
@@ -41,7 +41,7 @@ extern class DataStore
 	public function remove( ?onComplete:Dynamic->Void ):Void;
 
 	/**
-	 * 
+	 *
 	 * @param	value		値
 	 * @param	onComplete	完了時のコールバック関数
 	 */

@@ -10,7 +10,7 @@ package milkcocoa;
 	public function new( host:String, ?cb:Dynamic->Void ):Void;
 
 	/**
-	 * 
+	 *
 	 * @param	token	アクセストークン
 	 * @param	cb		コールバック関数
 	 */
@@ -23,7 +23,9 @@ package milkcocoa;
 	 * @param	option	？
 	 * @param	cb		コールバック関数
 	 */
-	public function signUp( email:String, secret:String, option:Dynamic, cb:Dynamic->Dynamic->Void ):Void;
+	public function addAccount( email:String, secret:String, option:Dynamic, cb:Dynamic->Dynamic->Void ):Void;
+
+	public function anonymous(cb:Dynamic->Dynamic->Void):Void;
 
 	/**
 	 * サインイン
@@ -31,13 +33,13 @@ package milkcocoa;
 	 * @param	secret	シークレットキー
 	 * @param	cb		コールバック関数
 	 */
-	public function signIn( email:String, secret:String, cb:Dynamic->Dynamic->Void ):Void;
+	public function login( email:String, secret:String, cb:Dynamic->Dynamic->Void ):Void;
 
 	/**
 	 * サインアウト
 	 * @param	cb	コールバック関数
 	 */
-	public function signOut( ?cb:Dynamic->Void ):Void;
+	public function logout( ?cb:Dynamic->Void ):Void;
 
 	/**
 	 * ユーザーリスト取得
