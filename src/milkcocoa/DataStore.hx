@@ -1,13 +1,14 @@
 package milkcocoa;
 
+typedef CallbackArg = {
+	err : Int,
+	path : String,
+	id : String,
+	value : Dynamic
+}
+
 extern class DataStore
 {
-	/**
-	 * コンストラクタ
-	 * @param	path	パス文字列
-	 */
-	public function new( path:String ):Void;
-
 	/**
 	 * 送信
 	 * @param	value	値
@@ -25,27 +26,27 @@ extern class DataStore
 	 * @param	event	イベント名
 	 * @param	cb		コールバック関数
 	 */
-	public function on( event:String, ?cb:Dynamic->Void ):Void;
+	public function on( event:String, ?cb:CallbackArg->Void ):Void;
 
 	/**
 	 * プッシュ
 	 * @param	value		値
 	 * @param	onComplete	完了時のコールバック関数
 	 */
-	public function push( value:Dynamic, ?onComplete:Dynamic->Void ):Void;
+	public function push( value:Dynamic, ?onComplete:CallbackArg->Void ):Void;
 
 	/**
 	 * 削除
 	 * @param	onComplete	完了時のコールバック関数
 	 */
-	public function remove( ?onComplete:Dynamic->Void ):Void;
+	public function remove( id : String ):Void;
 
 	/**
 	 *
 	 * @param	value		値
 	 * @param	onComplete	完了時のコールバック関数
 	 */
-	public function set( value:Dynamic, ?onComplete:Dynamic->Void ):Void;
+	public function set( id : String, value:Dynamic ):Void;
 
 	/**
 	 * クエリ
@@ -77,7 +78,7 @@ extern class DataStore
 	 * @param	query	子供の名前
 	 * @return	子供のデータストア
 	 */
-	public function child( query:String ):DataStore;
+	public function child( path:String ):DataStore;
 
 	/**
 	 * ルート取得

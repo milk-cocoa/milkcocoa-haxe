@@ -7,25 +7,16 @@ package milkcocoa;
 	 * @param	host	ホスト
 	 * @param	cb		コールバック関数
 	 */
-	public function new( host:String, ?cb:Dynamic->Void ):Void;
-
-	/**
-	 *
-	 * @param	token	アクセストークン
-	 * @param	cb		コールバック関数
-	 */
-	public function auth( token:String, ?cb:Dynamic->Void ):Void;
+	public function new( host:String ):Void;
 
 	/**
 	 * サインアップ
 	 * @param	email	メールアドレス
-	 * @param	secret	シークレットキー
+	 * @param	password	シークレットキー
 	 * @param	option	？
 	 * @param	cb		コールバック関数
 	 */
-	public function addAccount( email:String, secret:String, option:Dynamic, cb:Dynamic->Dynamic->Void ):Void;
-
-	public function anonymous(cb:Dynamic->Dynamic->Void):Void;
+	public function addAccount( email:String,password:String, option:Dynamic, cb:Dynamic->Dynamic->Void ):Void;
 
 	/**
 	 * サインイン
